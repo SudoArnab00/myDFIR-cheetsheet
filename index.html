@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lightweight DFIR reference: status codes, cheatsheets, and IR playbooks.">
+  <meta name="theme-color" content="#0f1419">
+  <title>DFIR Reference</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>DFIR Reference</h1>
+        <span class="tag">Pi-friendly · offline</span>
+      </div>
+
+      <nav class="tabs" id="tabs" role="tablist" aria-label="Main sections">
+        <button type="button" class="tab active" role="tab" aria-selected="true" data-tab="codes">Codes</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" data-tab="cheatsheets">Cheatsheets</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" data-tab="playbooks">Playbooks</button>
+      </nav>
+
+      <div class="search-row">
+        <input
+          id="q"
+          type="search"
+          placeholder="Search…"
+          autocomplete="off"
+          spellcheck="false"
+          enterkeyhint="search"
+        >
+      </div>
+      <div class="meta-line">
+        <span id="stats">Loading…</span>
+        <span><kbd>/</kbd> search · <kbd>Esc</kbd> clear</span>
+      </div>
+      <nav class="chips" id="chips" aria-label="Filters"></nav>
+    </div>
+  </header>
+
+  <!-- Tab: error / status codes (tables) -->
+  <div id="panel-codes" class="panel active" role="tabpanel">
+    <main id="main"></main>
+    <p id="empty" class="empty hidden">No matches. Try another term or category.</p>
+  </div>
+
+  <!-- Tab: markdown cheatsheets -->
+  <div id="panel-cheatsheets" class="panel" role="tabpanel" hidden>
+    <div class="docs-layout">
+      <aside class="doc-nav" id="nav-cheatsheets" aria-label="Cheatsheets list"></aside>
+      <article class="doc-view prose" id="view-cheatsheets">
+        <p class="muted">Select a cheatsheet.</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- Tab: markdown playbooks -->
+  <div id="panel-playbooks" class="panel" role="tabpanel" hidden>
+    <div class="docs-layout">
+      <aside class="doc-nav" id="nav-playbooks" aria-label="Playbooks list"></aside>
+      <article class="doc-view prose" id="view-playbooks">
+        <p class="muted">Select a playbook.</p>
+      </article>
+    </div>
+  </div>
+
+  <footer>
+    Static DFIR reference (codes · cheatsheets · playbooks). Content includes material from PiDash.
+    Verify against primary sources for casework. Tuned for low-power hosts (e.g. Raspberry Pi Zero 2 W).
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/docs.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
